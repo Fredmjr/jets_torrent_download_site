@@ -1,0 +1,104 @@
+<div id="dowloadsPg">
+  {{! downloads navibar }}
+  <div id="top">
+    <div id="topcntnts">
+      {{! left }}
+      <div id="lft_dwnlds">
+        <div id="rtrnhmBtn"><img
+            src="../public/src/assets/icons/jts_home.png"
+            alt=""
+            width="20"
+          /></div>
+        <p>TORRENT DOWNLOADS</p>
+      </div>
+
+      {{! right }}
+      <div id="rghts_dwnlds">
+        <button id="rlddwldpgBtn">
+          <span>
+            <img
+              src="../public/src/assets/icons/jts_home.png"
+              alt=""
+              width="20"
+            />
+          </span>
+        </button>
+
+        <div id="pauseresumepnl">
+          <div id="dwnldsdrpdwnmn" style="display: none;">
+            <button id="palldwldsBtn">
+              <span>
+                <img
+                  src="../public/src/assets/icons/jts_home.png"
+                  alt=""
+                  width="20"
+                />
+              </span>
+              pause all</button>
+          </div>
+          <img
+            id="dwnldspg_dotmenu"
+            src="../public/src/assets/icons/dotmenu.png"
+            alt=""
+            width="3"
+          />
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br /><br />
+  {{! Downloading torrents }}
+  <p id="dwnldngtrrnt">Downloading Torrents</p>
+  <div class="dwnldstypettlbar">
+    <p class="txtdwlnds">Searched torrent downloads</p>
+    <p class="txtdwlnds">.torrent file downloads</p>
+  </div>
+  <div class="dowloadscntnts">
+    <div class="glsbar">
+      <div id="srchd_livedwnlds">{{! dynamic data! }}</div>
+      <div id="fl_livedwnlds">{{! dynamic data! }}</div>
+    </div>
+  </div>
+  <br /><br />
+  {{! Pending downloads }}
+  <p id="dwnldngtrrnt">Pending Torrents</p>
+  <div class="dwnldstypettlbar">
+    <p class="txtdwlnds">Searched torrent downloads</p>
+    <p class="txtdwlnds">.torrent file downloads</p>
+  </div>
+  <div class="dowloadscntnts">
+    <div class="glsbar">
+      {{! Searched torrent downloads }}
+      {{! individual downloads }}
+      <div id="srchtrrntsdwnlds">{{! dynamic data! }}</div>
+
+      {{! .Torrent file downloads }}
+      <div id="filetrrntsdwnlds">
+        <div id="fileddwnlds">{{! dynamic data! }}</div>
+      </div>
+
+    </div>
+  </div>
+
+  {{! err message panel for downloads }}
+  <div id="dwnldsfooterhoverPnl">
+    <div id="intrnterrmgspnl" style="display: none;"></div>
+  </div>
+  <br /><br />
+
+  {{! Downloads complete }}
+  <p id="dwnldscmplt">Downloaded Torrents</p>
+  <div class="dwnldstypettlbar">
+    <p class="txtdwlnds">Searched torrent downloads</p>
+    <p class="txtdwlnds">.torrent file downloads</p>
+  </div>
+  <div class="dowloadscntnts">
+    <div class="glsbar">
+      <div id="srchtrrntsdwnlds2">{{! dynamic data! }}</div>
+      <div id="filetrrntsdwnlds2">{{! dynamic data! }}</div>
+    </div>
+  </div>
+  <div class="dowloadscntnts"></div>
+  <br /><br />
+</div>

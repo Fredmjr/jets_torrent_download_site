@@ -1,0 +1,11 @@
+./dist
+dist
+
+./node_modules
+node_modules
+
+./trash
+trash
+
+./torrent_assets
+torrent_assets

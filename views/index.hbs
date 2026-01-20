@@ -1,0 +1,172 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>jets_torrent</title>
+    <link href="src/css/app.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <div class="title_bar">
+      <div id="title_barcntnts">
+        <div id="title_barlgpnl">
+          <span id="title_barimg"><img
+              src="src/assets/logo/jets_torrents yts technologies torrent movie downloader normal logo branded.png"
+              alt=""
+              width="13"
+            /></span>
+          <p id="title_bartxt">JETS_TORRENT</p>
+        </div>
+        <div>
+          <button id="min_btn">–</button>
+          <button id="max_btn">□</button>
+          <button id="close_btn" title="close">×</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="home">
+      {{! welcome screen }}
+      <div id="welcome">
+        <div id="welcomemgs">
+          <div>
+            <div id="jets_t_logo">
+              <img
+                src="src/assets/logo/jets_torrents yts technologies torrent movie downloader normal logo branded.png"
+                alt=""
+                width="50"
+              /></div>
+            <p id="JETS_TORRENT_ttl">JETS_TORRENT</p>
+            <p id="vrsn">v1.0.0</p>
+          </div>
+        </div>
+      </div>
+
+      {{! side menu }}
+      <div id="sidemenu">
+        <div id="banner_logo">
+          <div id="jets_t_logo">
+            <img
+              src="src/assets/logo/jets_torrents yts technologies torrent movie downloader normal logo branded.png"
+              alt=""
+              width="25"
+            /></div>
+          <span>
+            <p id="JETS_TORRENT_hm_ttl">JETS_TORRENT</p>
+            <p id="vrsn_hm">v1.0.0</p>
+          </span>
+
+        </div>
+        <div id="sidemnu_lnks">
+          <p class="sidemnulnk" id="home_hmBtn">
+            <span><img
+                src="src/assets/icons/jts_home.png"
+                alt=""
+                width="20"
+              /></span>
+            Home</p>
+          <p class="sidemnulnk" id="srchtrrnts">
+            <span><img
+                src="src/assets/icons/jts_search.png"
+                alt=""
+                width="20"
+              /></span>
+            Search torrents</p>
+          <p class="sidemnulnk" id="home_dwnldpgBtn">
+            <span><img
+                src="src/assets/icons/jts_downloads.png"
+                alt=""
+                width="20"
+              /></span>
+            Downloads</p>
+        </div>
+
+        <div id="settings">
+          <img
+            id="setting_icon"
+            src="src/assets/icons/settings.png"
+            alt="setting_icon"
+            width="15"
+          />
+        </div>
+      </div>
+
+      {{! contents }}
+      <div id="contents">
+
+        <div id="mainContents">
+          <div id="banner"></div>
+          <br /><br /><br />
+
+          {{! Upload }}
+          <div id="mainContents_hdr"><br /><br />
+            <p id="wlmtojt">Welcome to</p>
+            <p id="jtttltxt">JETS_TORRENT</p>
+            <p id="trrntdwnrtxt">Torrent Movie Downloader</p>
+            <p id="wlmtojtdscrpt">Integration with YTS technologies, drop file
+              or search, download and enjoy your movies</p>
+            <br /><br />
+            <form id="torrent-form">
+              <div class="file-drop">
+                <input type="file" id="trrntflid" accept=".torrent" />
+                <label for="trrntflid">
+                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                  <p>Drop .torrent file here or click to select</p>
+                </label>
+              </div><br /><br />
+              <div id="uploadbtn_pnl">
+                <button type="submit" id="upldBtn">Download</button>
+              </div>
+
+            </form>
+          </div>
+
+          {{! Progress }}
+          {{!           <div class="download-status">
+            <progress class="progress-bar" value="0" max="100"></progress>
+            <div class="stats">
+              <span>Downloaded: <span class="progress-text">0%</span></span>
+              <span>Peers: <span class="peers">0</span></span>
+              <span>Status: <span class="status">Idle</span></span>
+
+            </div>
+          </div> }}
+
+        </div>
+        <br />
+        <br />
+        {{! Error message }}
+        <div id="ermgPnl" style="display: none;"></div>
+
+        <br /><br /><br /><br />
+        <div id="nofitictions">
+          <div id="qcktourimg">
+            <img
+              id="qcktouricon"
+              src="src/assets/icons/movie-tour2.png"
+              alt=""
+              width="60"
+            />
+          </div>
+          <div id="qcktourtxt">
+            <p id="quicktrdttl">Jets_Torrent Qucik Tour</p>
+            <p id="quicktrdscrpt">Take a qucik tour through jets_torrent, its
+              difficult untill you understand how it works</p>
+            <button id="gtsrttturdBtn">Get started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/js/app.js"></script>
+    <script src="src/js/anima.js"></script>
+    <script src="src/js/winsframe.js"></script>
+    <script src="src/js/ui.js"></script>
+    <script src="src/js/torrents.js"></script>
+  </body>
+</html>
