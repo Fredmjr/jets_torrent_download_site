@@ -9,3 +9,6 @@ trash
 
 ./torrent_assets
 torrent_assets
+
+./db/database.db
+db/database.db
