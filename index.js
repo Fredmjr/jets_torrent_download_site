@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import appRouter from "./routes/app.routes.js";
 import apiRouter from "./routes/api.routes.js";
+import userRouter from "./routes/user.routes.js";
 import sequelize from "./config/db.js";
 
 const app = express();
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 });
 app.use("/app", appRouter);
 app.use("/api", apiRouter);
+app.use("/usr", userRouter);
 
 (async () => {
   await sequelize.sync();

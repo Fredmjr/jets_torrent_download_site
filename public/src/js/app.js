@@ -21,34 +21,64 @@ lrnmrBtn.addEventListener("click", () => {
       } else if (data.app_data) {
         bdy_cntnt.innerHTML = `
           <div  class="lrnmrCrd">
-            <div class="app_i_crd" id="app_mngmt">
+            <div class="app_i_crd" id="app_v">
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_version.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
                 <p class="mn_tp_ttl">${data.app_data.a_dtls.title}</p>
                 <p class="linr"><span class="mn_ttl">Version: </span>${data.app_data.a_dtls.version}</p>
                 <p class="linr"><span class="mn_ttl">Language: </span>${data.app_data.a_dtls.languages}</p>
                 <p class="linr"><span class="mn_ttl">Compatibility: </span>${data.app_data.a_dtls.compatibility}</p>
-                <p class="linr"><span class="mn_ttl">Format: </span>${data.app_data.a_dtls.format}</p>
+                <p class="linr"><span class="mn_ttl">Format: </span>${data.app_data.a_dtls.format}</p>                    
+                </div>
             </div>
-            <div class="app_i_crd" id="app_v">
+            <div class="app_i_crd" id="app_dsrcptns">
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Description.png" class="app-icon" width="17"></span>
+                </div>
+                <div>
                  <p class="mn_tp_ttl">${data.app_data.dscrptn.title}</p>
-                <p class="linr">${data.app_data.dscrptn.text}</p>
+                  <p class="linr">${data.app_data.dscrptn.text}</p>                    
+                </div>
             </div>
            <div class="lnr_brkr"></div>
             <div class="app_i_crd" id="bnfts">
-                <p class="mn_tp_ttl">${data.app_data.bnfts.title}</p>
-                <p class="linr">${data.app_data.bnfts.text}</p>
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Benefits.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.bnfts.title}</p>
+                  <p class="linr">${data.app_data.bnfts.text}</p>                    
+                </div>
             </div>
-            <div class="app_i_crd"  id="bugs">
-                <p class="mn_tp_ttl">${data.app_data.a_mngnt.title}</p>
-                <p class="linr">${data.app_data.a_mngnt.text}</p>
+            <div class="app_i_crd"  id="app_mngmnt">
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Management.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.a_mngnt.title}</p>
+                  <p class="linr">${data.app_data.a_mngnt.text}</p>                    
+                </div>
             </div>
            <div class="lnr_brkr"></div>
-            <div class="app_i_crd" id="app_dsrcptns">
-                <p class="mn_tp_ttl">${data.app_data.bgs.title}</p>
-                <p class="linr">${data.app_data.bgs.text}</p>
+            <div class="app_i_crd" id="bugs">
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Bugs.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.bgs.title}</p>
+                  <p class="linr">${data.app_data.bgs.text}</p>                    
+                </div>
             </div>         
             <div class="app_i_crd" id="rvws">
-                <p class="mn_tp_ttl">${data.app_data.rvw.title}</p>
-                <p class="linr">${data.app_data.rvw.text}</p>
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Review.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.rvw.title}</p>
+                  <p class="linr">${data.app_data.rvw.text}</p>                    
+                </div>
             </div>            
           </div>`;
       }
@@ -71,7 +101,6 @@ document.querySelector("#trmsBtn").addEventListener("click", () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       if (data.erMgs) {
         bdy_cntnt.innerHTML = data.erMgs;
       } else if (data.app_data) {
@@ -79,20 +108,40 @@ document.querySelector("#trmsBtn").addEventListener("click", () => {
         <p class="trms_ttl">Terms of Use</p>
          <div  class="lrnmrCrd">
             <div class="app_i_crd" id="trm_1">
-                <p class="mn_tp_ttl">${data.app_data.a.title}</p>
-                <p class="linr">${data.app_data.a.dscrptn}</p>
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Responsibility.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.a.title}</p>
+                  <p class="linr">${data.app_data.a.dscrptn}</p>
+                </div>              
             </div>
-              <div class="app_i_crd" id="trm_2">
-                <p class="mn_tp_ttl">${data.app_data.b.title}</p>
-                <p class="linr">${data.app_data.b.dscrptn}</p>
+            <div class="app_i_crd" id="trm_2">
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_System.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.b.title}</p>
+                  <p class="linr">${data.app_data.b.dscrptn}</p>
+                </div>  
             </div>
-        <div class="app_i_crd" id="trm_3">
-                <p class="mn_tp_ttl">${data.app_data.c.title}</p>
-                <p class="linr">${data.app_data.c.dscrptn}</p>
+            <div class="app_i_crd" id="trm_3">
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Connections.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.c.title}</p>
+                  <p class="linr">${data.app_data.c.dscrptn}</p>
+                </div>  
             </div>
               <div class="app_i_crd" id="trm_3">
-                <p class="mn_tp_ttl">${data.app_data.d.title}</p>
-                <p class="linr">${data.app_data.d.dscrptn}</p>
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Activity.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                  <p class="mn_tp_ttl">${data.app_data.d.title}</p>
+                  <p class="linr">${data.app_data.d.dscrptn}</p>
+                </div>  
             </div>
             
          </div>
@@ -108,25 +157,35 @@ document.querySelector("#prvcyBtn").addEventListener("click", () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       if (data.erMgs) {
         bdy_cntnt.innerHTML = data.erMgs;
       } else if (data.app_data) {
         bdy_cntnt.innerHTML = `
         <p class="prvcy_ttl">Privacy Policy</p>
          <div  class="lrnmrCrd">
-            <div class="app_i_crd" id="prvcy_1">
-                <p class="linr">1. ${data.app_data.text_1}</p>
-                <p class="linr">2. ${data.app_data.text_2}</p>
-                <p class="linr">3. ${data.app_data.text_3}</p>
+              <div class="app_i_crd" id="prvcy_1">
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_Privacy.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                    <p class="mn_tp_ttl">${data.app_data.sub_title}</p>
+                    <p class="linr">1. ${data.app_data.text_1}</p>
+                    <p class="linr">2. ${data.app_data.text_2}</p>
+                    <p class="linr">3. ${data.app_data.text_3}</p>
+                </div>
                 </div>  
                 
              <div class="app_i_crd" id="prvcy_2">
-                <p class="mn_tp_ttl">${data.app_data.text_4.text_4_0}</p>
-                <p class="linr">1. ${data.app_data.text_4.text_4_1}</p>
-                <p class="linr">2. ${data.app_data.text_4.text_4_2}</p>
-                <p class="linr">3. ${data.app_data.text_4.text_4_3}</p>
-            </div>
+                <div class=ftr_tnc_icon>
+                  <span><img id="suggest" src="assets/icons/jts_access.png" class="app-icon" width="20"></span>
+                </div>
+                <div>
+                    <p class="mn_tp_ttl">${data.app_data.text_4.text_4_0}</p>
+                    <p class="linr">1. ${data.app_data.text_4.text_4_1}</p>
+                    <p class="linr">2. ${data.app_data.text_4.text_4_2}</p>
+                    <p class="linr">3. ${data.app_data.text_4.text_4_3}</p>
+                </div>
+                </div>
            </div>
             
          </div>
@@ -145,7 +204,6 @@ document.querySelector("#chkupdtsBtn").addEventListener("click", () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       if (data.erMgs) {
         bdy_cntnt.innerHTML = data.erMgs;
       } else if (data.app_data) {
@@ -205,7 +263,7 @@ document.querySelector("#suggest").addEventListener("click", () => {
     })
     .catch((error) => console.error(error));
 });
-//like section
+//like screen
 document.querySelector("#like").addEventListener("click", () => {
   fetch("/api/lk", {
     method: "GET",
@@ -217,13 +275,18 @@ document.querySelector("#like").addEventListener("click", () => {
     .catch((error) => console.error(error));
 });
 
+//like the project
 const mainobsrvr = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     mutation.addedNodes.forEach((node) => {
-      const el1 = node.matches?.(".heart")
+      const el1 = node.matches?.(".rate_shape")
         ? node
-        : node.querySelectorAll?.(".heart");
+        : node.querySelectorAll?.(".rate_shape");
+      const el2 = node.matches?.("#heartedBtn")
+        ? node
+        : node.querySelector?.("#heartedBtn");
 
+      //likes
       if (el1) {
         //like and rating
 
@@ -242,6 +305,48 @@ const mainobsrvr = new MutationObserver((mutations) => {
             }
 
             ratingValue.textContent = `Liked project: ${value}/5`;
+
+            //like the project send
+            //cookie tkn collection
+            el2.addEventListener("click", () => {
+              c = (elem) => {
+                let ckies = document.cookie.split("; ");
+                for (let i = 0; i < ckies.length; i++) {
+                  let cookie = ckies[i];
+                  let [name, value] = cookie.split("=");
+                  if (name === elem) {
+                    return decodeURIComponent(value);
+                  }
+                }
+                return null;
+              };
+
+              //check cookie tkn
+              const id = c("usr_id_tkn");
+              const like = value;
+              const dataobj = { id, like };
+              if ((id, like)) {
+                fetch("/api/lknum", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(dataobj),
+                })
+                  .then((response) => response.json())
+                  .then((data) => {
+                    if (data.erMgs) {
+                      const e = `<div class="mgsPnl">${data.erMgs}</div>`;
+                      bdy_cntnt.innerHTML = e;
+                    }
+                    if (data.lk_sttus === true) {
+                      const e = `<div class="mgsPnl">${data.mgs}</div>`;
+                      bdy_cntnt.innerHTML = e;
+                    }
+                  })
+                  .catch((error) => console.error(error));
+              }
+            });
           });
         });
       }
@@ -252,4 +357,63 @@ const mainobsrvr = new MutationObserver((mutations) => {
 mainobsrvr.observe(home, {
   childList: true,
   subtree: true,
+});
+
+//suggestion txt_datas
+//quick tutorial page
+home.addEventListener("click", async (event) => {
+  if (event.target.closest("#sbmtsggstBtn")) {
+    const e = document.querySelector("#sggst_txt");
+    const em = document.querySelector("#email");
+    const er = document.querySelector("#ermgs_sggstpg");
+    c = (elem) => {
+      let ckies = document.cookie.split("; ");
+      for (let i = 0; i < ckies.length; i++) {
+        let cookie = ckies[i];
+        let [name, value] = cookie.split("=");
+        if (name === elem) {
+          return decodeURIComponent(value);
+        }
+      }
+      return null;
+    };
+    const id = c("usr_id_tkn");
+    const eml = em.value;
+    fetch("/api/txtdata", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        eml: eml,
+        id: id,
+        txt_data: e.value,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.erMgs) {
+          er.style.display = "block";
+          er.innerHTML = data.erMgs;
+          setTimeout(() => {
+            er.style.display = "none";
+          }, 5000);
+        }
+        if (data.txt_sttus === true) {
+          er.style.display = "block";
+          er.innerHTML = data.mgs;
+          setTimeout(() => {
+            er.style.display = "none";
+          }, 5000);
+        }
+        if (data.txt_pending_sttus === true) {
+          er.style.display = "block";
+          er.innerHTML = data.mgs;
+          setTimeout(() => {
+            er.style.display = "none";
+          }, 7000);
+        }
+      })
+      .catch((error) => console.error(error));
+  }
 });

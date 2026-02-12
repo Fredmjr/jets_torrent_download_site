@@ -2,11 +2,13 @@ import express from "express";
 import {
   apiUrl,
   dwnlappUrl,
+  lknumUrl,
   lkUrl,
   lrnmrdataUrl,
   prvcyUrl,
   sggstUrl,
   trmsUrl,
+  txtdataUrl,
   vrndwnldUrl,
   vrsndataUrl,
 } from "../controllers/api.controller.js";
@@ -22,5 +24,7 @@ router.get("/vrsndata", vrsndataUrl);
 router.get("/vrndwnld/:id", vrndwnldUrl);
 router.get("/sggst", sggstUrl);
 router.get("/lk", lkUrl);
+router.post("/lknum", lknumUrl);
+router.post("/txtdata", txtdataUrl);
 
 export default router;

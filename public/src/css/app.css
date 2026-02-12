@@ -53,7 +53,7 @@ body {
   align-items: center;
   gap: 7px;
   font-family: reddir-extrabold;
-  font-size: 6px;
+  font-size: 8px;
 }
 
 #rht {
@@ -180,7 +180,7 @@ body {
   height: 5%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  font-size: 7px;
+  font-size: 9px;
   padding: 0px 30px;
   border-top: 1px solid var(--drk-theme1);
 }
@@ -417,21 +417,6 @@ body {
 }
 
 /* like and ratng */
-.heartpnl {
-  display: flex;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.heart {
-  font-size: 30px;
-  color: var(--clr-theme5);
-  transition: color 0.2s;
-}
-
-.heart.active {
-  color: var(--clr-icon);
-}
 #heartedBtn {
   padding: 7px 25px;
   overflow: hidden;
@@ -464,4 +449,199 @@ body {
 }
 #heart_rating {
   text-align: center;
+}
+.heart {
+  background-color: var(--drk-theme2);
+  border-radius: 50%;
+  border: 1px solid var(--drk-theme1);
+  padding: 7px;
+
+  width: 50px;
+  height: 50px;
+}
+.heart_shape {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+.rate_shape {
+  background-color: var(--drk-theme2);
+  border-radius: 50%;
+  border: 1px solid var(--drk-theme1);
+  padding: 7px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-theme5);
+  transition: color 0.2s;
+}
+
+.rate_shape.active {
+  color: var(--clr-icon);
+}
+.mgsPnl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sggstPg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sggstpgcntnt {
+  width: 70%;
+}
+#sggst_txt {
+  width: 100%;
+  background-color: var(--drk-theme3);
+  color: var(--clr-theme5);
+  border: 1px solid var(--drk-theme1);
+  border-radius: 5px;
+  height: fit-content;
+  outline: none;
+  padding: 10px;
+  resize: vertical;
+  min-height: 70px;
+}
+.sggst_txt_dsrcptn {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#sbmtsggstBtn {
+  padding: 7px 25px;
+  overflow: hidden;
+  background-color: var(--drk-theme1);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  width: 40%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+}
+#sbmtsggstBtn:hover {
+  color: var(--clr-icon);
+}
+#sbmtsggstbtnpnl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#emlpnl {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#email {
+  width: 70%;
+  background-color: var(--drk-theme3);
+  color: var(--clr-theme5);
+  border: 1px solid var(--drk-theme1);
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+}
+#ermgs_sggstpg {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--clr-icon);
+}
+#prvcy_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#prvcy_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#trm_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#trm_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#trm_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#trm_4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.ftr_tnc_icon {
+  background-color: var(--drk-theme2);
+  border-radius: 50%;
+  border: 1px solid var(--drk-theme1);
+  padding: 12px;
+}
+#app_v {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#app_dsrcptns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#bnfts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#app_mngmnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#bugs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#rvws {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
