@@ -30,7 +30,6 @@ body {
   font-size: 12px;
   background-color: var(--drk-theme3);
   color: var(--clr-theme5);
-  height: 100vh;
 }
 #home {
   height: 100%;
@@ -55,7 +54,12 @@ body {
   font-family: reddir-extrabold;
   font-size: 8px;
 }
-
+#hm_jts_ttl {
+  font-size: 12px;
+}
+#hm_jts_logo {
+  width: 20px;
+}
 #rht {
   display: flex;
   align-items: center;
@@ -63,9 +67,11 @@ body {
 }
 #suggest {
   cursor: pointer;
+  width: 20px;
 }
 #like {
   cursor: pointer;
+  width: 20px;
 }
 #dwnldBtn {
   padding: 15px 25px;

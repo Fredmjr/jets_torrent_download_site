@@ -1,0 +1,9 @@
+all:
+  hosts:
+    jetstorrent_server:
+      ansible_host: 185.31.41.85
+      ansible_user: jetstorrent
+      ansible_password: "8024tlc"
+      ansible_port: 22 # optional, default is 22
+      ansible_connection: ssh
+      ansible_ssh_common_args: "-o StrictHostKeyChecking=no"

@@ -1,0 +1,105 @@
+---
+- name: Update jets_torrent_download_site - backup, pull fresh, restore env & modules, run
+  hosts: jetstorrent_server
+  become: false
+  gather_facts: false
+
+  #directory folders
+  vars:
+    project_dir: "~/jets_torrent_download_site"
+    backup_dir: "~/ansible_automations/backup_files"
+    logs_dir: "~/ansible_automations/jets_torrent_ansible_logs"
+
+  tasks:
+    - name: Ensure backup and logs directories exist
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0755"
+      loop:
+        - "{{ backup_dir }}"
+        - "{{ logs_dir }}"
+
+    #Move .env and node_modules to backup location (if project exists)
+    - name: Move .env and node_modules to backup location (if project exists)
+      ansible.builtin.command: mv {{ item }} {{ backup_dir }}/
+      loop:
+        - "{{ project_dir }}/.env"
+        - "{{ project_dir }}/node_modules"
+      ignore_errors: true
+      register: backup_move_result
+
+    #Even broader cleanup - kill anything using files in the project dir (lsof style)
+    - name: Even broader cleanup - kill anything using files in the project dir (lsof style)
+      ansible.builtin.shell: |
+        pids=$(lsof +D {{ project_dir }} 2>/dev/null | awk 'NR>1 {print $2}' | sort -u | tr '\n' ' ')
+        [ -n "$pids" ] && kill -9 $pids || true
+      ignore_errors: yes
+      changed_when: false
+      register: kill_processes_result
+
+    #Wait longer for NFS handles and .nfs stubs to fully release
+    - name: Wait longer for NFS handles and .nfs stubs to fully release
+      ansible.builtin.pause:
+        seconds: 5
+
+    #Remove old project directory (force recursive delete)
+    - name: Remove old project directory (force recursive delete)
+      ansible.builtin.command: rm -rf {{ project_dir }}
+      changed_when: true
+      ignore_errors: yes
+      register: remove_directory_result
+
+    #Clone fresh repository
+    - name: Clone fresh repository
+      ansible.builtin.git:
+        repo: https://github.com/Fredmjr/jets_torrent_download_site.git
+        dest: "{{ project_dir }}"
+        clone: yes
+        update: yes
+      register: git_clone_result
+
+    #Restore .env and node_modules from backup
+    - name: Restore .env and node_modules from backup
+      ansible.builtin.command: mv {{ backup_dir }}/{{ item }} {{ project_dir }}/
+      loop:
+        - .env
+        - node_modules
+      ignore_errors: true
+      register: restore_files_result # ← added
+
+    #Start the application (non-blocking - runs in background)
+    - name: Start the application (non-blocking - runs in background)
+      ansible.builtin.shell: |
+        cd {{ project_dir }}
+        nohup node index.js > app.log 2>&1 &
+      args:
+        chdir: "{{ project_dir }}"
+      register: start_app_result # ← added
+
+    #Generate log filename with current date and time
+    - name: Generate log filename with current date and time
+      ansible.builtin.set_fact:
+        log_filename: "{{ now(fmt='%Y-%m-%d_%H-%M-%S') }}.txt"
+
+    #Write process summary to log file
+    - name: Write process summary to log file
+      ansible.builtin.copy:
+        content: |
+          Process Summary
+          - cd into jets_torrent_download_site                  → Success
+          - Move .env and node_modules to backup                → {{ 'Success' if backup_move_result is success else 'Failed / Skipped' }}
+          - Delete jets_torrent_download_site folder            → {{ 'Success' if remove_directory_result is success else 'Failed' }}
+          - cd to home directory                                → Success
+          - git clone https://github.com/Fredmjr/jets_torrent_download_site.git → {{ 'Success' if git_clone_result is success else 'Failed' }}
+          - Move .env and node_modules from backup into new folder → {{ 'Success' if restore_files_result is success else 'Failed / Skipped' }}
+          - cd into jets_torrent_download_site                  → Success
+          - Run node index.js                                   → {{ 'Success' if start_app_result is success else 'Failed' }}
+          - cd ../ansible_automations/jets_torrent_ansible_logs → Success
+          - Create file named with current date_time.txt        → {{ 'Success' if log_filename is defined else 'Failed' }}
+          - Write this summary into that file                   → Success
+
+          Date & Time:
+          {{ now(fmt='%Y-%m-%d %H:%M:%S %Z') }}
+        dest: "{{ logs_dir }}/{{ log_filename }}"
+        mode: "0644"
