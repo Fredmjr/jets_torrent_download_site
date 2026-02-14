@@ -1,30 +1,26 @@
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>jets_torrent</title>
     <link href="src/css/app.css" rel="stylesheet" />
-    <link href="src/css/login.css" rel="stylesheet" />
-    <link href="src/css/signup.css" rel="stylesheet" />
-    <link href="src/css/psude_effects.css" rel="stylesheet" />
-    <link href="src/css/home.css" rel="stylesheet" />
-    <title>Cloud1</title>
+
   </head>
+
   <body>
     <div id="home">
       {{! navibar }}
-      <div class="naviBar">
+      <div id="nvbr">
         <div id="lft">
           <div id="lft_logo">
             <span>
               <img
                 src="assets/logos/jets_torrents.png"
                 class="app-icon"
-                width="30"
+                width="15"
               />
             </span>
             <span>JETS_TORRENT</span>
@@ -36,22 +32,18 @@
               id="suggest"
               src="assets/icons/jts_suggestion.png"
               class="app-icon"
-              width="30"
+              width="19"
             /></span>
           <span>
             <img
               id="like"
               src="assets/icons/jts_like.png"
               class="app-icon"
-              width="30"
+              width="19"
             /></span>
         </div>
       </div>
-
-      <div class="hm_spacr"></div>
-      {{! content spacer }}
-
-      {{! header }}
+      <br /><br /><br /><br /><br /><br />
       <div id="hr">
         <div id="hr_logo">
           <img
@@ -75,16 +67,16 @@
 
         </div>
       </div>
-      <div class="hm_spacr2"></div>
-      {{! header buttons }}
-      <div id="hdr_bttns">
+      <br /><br /><br /><br /><br />
+      {{! header }}
+      <div id="hdr">
         <button id="lrnmrBtn">
           <span>
             <img
               id="suggest"
               src="assets/icons/compass.png"
               class="app-icon"
-              width="20"
+              width="15"
             /></span>
           Learn more</button>
         <button id="dwnldBtn">
@@ -93,18 +85,18 @@
               id="suggest"
               src="assets/icons/download.png"
               class="app-icon"
-              width="20"
+              width="15"
             />
           </span>
           Download</button>
       </div>
       <br /><br />
-
-      {{! main contents }}
+      {{! body }}
       <div id="bdy">
         <div id="bdy_cntnt">
           <div id="updt_crd">
             <div id="updt_crd_cntnt">
+              {{! icon }}
               <div id="updticonPnl">
                 <img
                   id="updticon"
@@ -112,6 +104,7 @@
                   class="app-icon"
                   width="55"
                 /></div>
+              {{! info }}
               <div id="updt_crd_info">
                 <p id="chkupdts_txt">Looking for a specific update?</p>
                 <p id="chkupdts_subtxt">Take a look at a list of updates</p>
@@ -119,21 +112,23 @@
                 <div id="chkupdtspnl">
                   <button id="chkupdtsBtn">Check updates</button>
                 </div>
+
               </div>
             </div>
+
           </div>
         </div>
       </div>
-
+      <br /><br /><br />
       {{! footer }}
-      <div id="footer">
+      <div id="ftr">
         {{! left }}
-        <div id="ftr_logo">
+        <div id="lft_logo">
           <span>
             <img
               src="assets/logos/jets_torrents.png"
               class="app-icon"
-              width="20"
+              width="12"
             />
           </span>
           <span>JETS_TORRENT</span>
@@ -146,5 +141,8 @@
         </div>
       </div>
     </div>
+
+    <script src="/src/js/app.js"></script>
+    <script src="/src/js/prlr.js"></script>
   </body>
 </html>
