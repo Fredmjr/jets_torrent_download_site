@@ -3,7 +3,7 @@ const lrnmrBtn = document.querySelector("#lrnmrBtn");
 const dwnldBtn = document.querySelector("#dwnldBtn");
 const home = document.querySelector("#home");
 const ldng = `<div id="loadingPnl"><img
-              src="assets/icons/jts_loading.png"
+              src="/assets/icons/jts_loading.png"
               class="loading"
               width="35"
             /></div>`;
@@ -125,6 +125,7 @@ document.querySelector("#trmsBtn").addEventListener("click", () => {
                   <p class="linr">${data.app_data.b.dscrptn}</p>
                 </div>  
             </div>
+            <div class="lnr_brkr"></div>
             <div class="app_i_crd" id="trm_3">
                 <div class=ftr_tnc_icon>
                   <span><img   src="assets/icons/jts_Connections.png" class="app-icon" width="20"></span>

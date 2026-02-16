@@ -231,6 +231,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+#updticon {
+  background-color: var(--drk-theme2);
+  border-radius: 50%;
+  border: 1px solid var(--drk-theme1);
+  padding: 20px;
+}
 #updticonPnl {
   display: flex;
   justify-content: center;
@@ -499,6 +505,7 @@ body {
   .vrsnId {
     width: 94%;
     height: fit-content;
+    padding: 10px;
   }
 }
 @media (min-width: 768px) {
@@ -577,6 +584,7 @@ body {
 @media (max-width: 768px) {
   #vrsn_bttm {
     font-size: 11px;
+    padding: 0px 10px;
   }
 }
 
@@ -744,6 +752,12 @@ body {
   gap: 7px;
   font-size: 12px;
 }
+#sbmtsggstBtn:focus,
+#sbmtsggstBtn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 #sbmtsggstBtn:hover {
   color: var(--clr-icon);
 }
