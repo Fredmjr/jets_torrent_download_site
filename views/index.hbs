@@ -1,18 +1,55 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    {{! favicon }}
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    {{! meta keys }}
+    <meta name="keywords" content="torrent" />
+    <meta
+      name="description"
+      content="A simple, straightforward torrent downloading application. It supports both .torrent files and in‑app torrent search. The app is primarily designed for downloading movies, but with .torrent files you can attempt to download other types of content. Keep in mind that non‑movie downloads may not always work smoothly."
+    />
+    <meta name="subject" content="torrent downloader" />
+    <meta name="og:url" content="https://jetstorrent.alwaysdata.net/" />
+    <meta name="og:title" content="jets_torrent" />
+    <meta name="DC.title" content="jets_torrent" />
+    <meta name="author" content="jetstorrent" />
+    <meta
+      name="og:image"
+      content="https://jetstorrent.alwaysdata.net/assets/logos/jets_torrents.png"
+    />
+    <meta
+      name="og:description"
+      content="A simple, straightforward torrent downloading application. It supports both .torrent files and in‑app torrent search. The app is primarily designed for downloading movies, but with .torrent files you can attempt to download other types of content. Keep in mind that non‑movie downloads may not always work smoothly."
+    />
+    <meta name="og:site_name" content="jets_torrent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    {{! css }}
     <link href="src/css/app.css" rel="stylesheet" />
     <link href="src/css/login.css" rel="stylesheet" />
     <link href="src/css/signup.css" rel="stylesheet" />
     <link href="src/css/psude_effects.css" rel="stylesheet" />
     <link href="src/css/home.css" rel="stylesheet" />
-    <title>Cloud1</title>
+    <title>jets_torrent</title>
   </head>
   <body>
     <div id="home">
@@ -142,5 +179,8 @@
         </div>
       </div>
     </div>
+
+    <script src="/src/js/app.js"></script>
+    <script src="/src/js/prlr.js"></script>
   </body>
 </html>
