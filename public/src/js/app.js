@@ -325,6 +325,7 @@ const mainobsrvr = new MutationObserver((mutations) => {
               const id = c("usr_id_tkn");
               const like = value;
               const dataobj = { id, like };
+              console.log(dataobj);
               if ((id, like)) {
                 fetch("/api/lknum", {
                   method: "POST",
