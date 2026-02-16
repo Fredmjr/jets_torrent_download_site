@@ -68,7 +68,6 @@ body {
 }
 #suggest {
   cursor: pointer;
-  background-color: #15191b;
 }
 #suggest:focus,
 #suggest:active {

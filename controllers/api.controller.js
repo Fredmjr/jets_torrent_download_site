@@ -221,7 +221,7 @@ export const lknumUrl = async (req, res) => {
         },
       });
       if (alrdy_like_crtd) {
-        return res.status(400).json({
+        return res.status(200).json({
           erMgs: "Already submitted!",
         });
       } else {
