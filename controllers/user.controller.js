@@ -32,3 +32,14 @@ export const crtusrUrl = async (req, res) => {
     });
   }
 };
+export const tstUrl = async (req, res) => {
+  try {
+    res.status(200).json({
+      tst: "testing",
+    });
+  } catch (error) {
+    res.status(400).json({
+      erMgs: "Unable to process request!",
+    });
+  }
+};
