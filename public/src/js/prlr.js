@@ -9,6 +9,7 @@
       .then((data) => {
         if (data.usr_id_tkn) {
           //cookie no expry voz it just a simple and quick setup
+          console.log("fetched: ", data.usr_id_tkn);
           document.cookie =
             `usr_id_tkn=${encodeURIComponent(data.usr_id_tkn)};` +
             `Secure; SameSite=Strict; path=/`;
@@ -32,6 +33,7 @@
 
   //check cookie tkn
   const usr_id_tkn = c("usr_id_tkn");
+  console.log("stored: ", usr_id_tkn);
 
   if (!usr_id_tkn) {
     ftch_tkn();
