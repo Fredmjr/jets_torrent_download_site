@@ -1,4 +1,4 @@
-fetch("/usr/crtusr", {
+fetch("/api/tst", {
   method: "GET",
 })
   .then((response) => response.json())

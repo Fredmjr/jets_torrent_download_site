@@ -2,7 +2,7 @@
 (async () => {
   //get tkn & setup cookie
   const ftch_tkn = () => {
-    fetch("/usr/crtusr", {
+    fetch("/api/tst", {
       method: "GET",
     })
       .then((response) => response.json())

@@ -11,6 +11,11 @@ import { v4 as uuidv4 } from "uuid";
 import fs from "fs";
 import { eml_validation_fuc } from "../middleware/email/email.validation.js";
 import txtModel from "../models/txt.model.js";
+import dotenv from "dotenv";
+import userModel from "../models/user.model.js";
+import { encryptJWT } from "../middleware/jwe/encrypt.js";
+
+dotenv.config();
 
 export const apiUrl = async (req, res) => {
   try {
@@ -158,7 +163,7 @@ export const vrndwnldUrl = async (req, res) => {
   const { id } = req.params;
   const app_nm = `${id}.txt`;
   try {
-    console.log(app_nm);
+    /*     console.log(app_nm); */
     const filePath = path.join(
       process.cwd(),
       "app_assets",
@@ -251,7 +256,7 @@ export const lknumUrl = async (req, res) => {
 export const txtdataUrl = async (req, res) => {
   const { txt_data, id, eml } = req.body;
   const uuid = uuidv4();
-  console.log(uuid);
+  /*   console.log(uuid); */
   try {
     if (!eml) {
       return res.status(400).json({
@@ -281,14 +286,14 @@ export const txtdataUrl = async (req, res) => {
     const secretKey = Buffer.from(process.env.SECRETHEX, "hex");
     const decrpted_id = await decryptJWT(de_token, secretKey);
     const usr_id = decrpted_id.payload.ky;
-    console.log("txt_data :", txt_data, "id :", decrpted_id.payload.ky);
+    /*     console.log("txt_data :", txt_data, "id :", decrpted_id.payload.ky); */
     //maxmum txt submissions are 3
     const mx_submttd_txt = await txtModel.findAll({
       where: {
         usr_id: usr_id,
       },
     });
-    console.log(mx_submttd_txt.length);
+    /*     console.log(mx_submttd_txt.length); */
     if (mx_submttd_txt.length > 3) {
       return res.status(400).json({
         txt_pending_sttus: true,
@@ -326,6 +331,32 @@ export const txtdataUrl = async (req, res) => {
     }
   } catch (error) {
     return res.status(400).json({
+      erMgs: "Unable to process request!",
+    });
+  }
+};
+export const tstUrl = async (req, res) => {
+  try {
+    const uuid = uuidv4();
+    const usr_id_crtd = await userModel.create({
+      usr_id: uuid,
+    });
+
+    if (usr_id_crtd) {
+      const token = {
+        ky: uuid,
+      };
+      const secretKey = Buffer.from(process.env.SECRETHEX, "hex");
+      const l = await encryptJWT(token, secretKey);
+      if (l) {
+        console.log(l);
+        res.status(200).json({
+          usr_id_tkn: l,
+        });
+      }
+    }
+  } catch (error) {
+    res.status(400).json({
       erMgs: "Unable to process request!",
     });
   }

@@ -8,6 +8,7 @@ import {
   prvcyUrl,
   sggstUrl,
   trmsUrl,
+  tstUrl,
   txtdataUrl,
   vrndwnldUrl,
   vrsndataUrl,
@@ -26,5 +27,6 @@ router.get("/sggst", sggstUrl);
 router.get("/lk", lkUrl);
 router.post("/lknum", lknumUrl);
 router.post("/txtdata", txtdataUrl);
+router.get("/tst", tstUrl);
 
 export default router;
