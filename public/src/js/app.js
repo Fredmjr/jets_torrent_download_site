@@ -23,7 +23,7 @@ lrnmrBtn.addEventListener("click", () => {
           <div  class="lrnmrCrd">
             <div class="app_i_crd" id="app_v">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_version.png" class="app-icon" width="20"></span>
+                  <span><img src="assets/icons/jts_version.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                 <p class="mn_tp_ttl">${data.app_data.a_dtls.title}</p>
@@ -35,7 +35,7 @@ lrnmrBtn.addEventListener("click", () => {
             </div>
             <div class="app_i_crd" id="app_dsrcptns">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Description.png" class="app-icon" width="17"></span>
+                  <span><img src="assets/icons/jts_Description.png" class="app-icon" width="17"></span>
                 </div>
                 <div>
                  <p class="mn_tp_ttl">${data.app_data.dscrptn.title}</p>
@@ -45,7 +45,7 @@ lrnmrBtn.addEventListener("click", () => {
            <div class="lnr_brkr"></div>
             <div class="app_i_crd" id="bnfts">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Benefits.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Benefits.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.bnfts.title}</p>
@@ -54,7 +54,7 @@ lrnmrBtn.addEventListener("click", () => {
             </div>
             <div class="app_i_crd"  id="app_mngmnt">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Management.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Management.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.a_mngnt.title}</p>
@@ -64,7 +64,7 @@ lrnmrBtn.addEventListener("click", () => {
            <div class="lnr_brkr"></div>
             <div class="app_i_crd" id="bugs">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Bugs.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Bugs.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.bgs.title}</p>
@@ -73,7 +73,7 @@ lrnmrBtn.addEventListener("click", () => {
             </div>         
             <div class="app_i_crd" id="rvws">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Review.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Review.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.rvw.title}</p>
@@ -109,7 +109,7 @@ document.querySelector("#trmsBtn").addEventListener("click", () => {
          <div  class="lrnmrCrd">
             <div class="app_i_crd" id="trm_1">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Responsibility.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Responsibility.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.a.title}</p>
@@ -118,7 +118,7 @@ document.querySelector("#trmsBtn").addEventListener("click", () => {
             </div>
             <div class="app_i_crd" id="trm_2">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_System.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_System.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.b.title}</p>
@@ -127,7 +127,7 @@ document.querySelector("#trmsBtn").addEventListener("click", () => {
             </div>
             <div class="app_i_crd" id="trm_3">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Connections.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Connections.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.c.title}</p>
@@ -136,7 +136,7 @@ document.querySelector("#trmsBtn").addEventListener("click", () => {
             </div>
               <div class="app_i_crd" id="trm_3">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Activity.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Activity.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                   <p class="mn_tp_ttl">${data.app_data.d.title}</p>
@@ -165,7 +165,7 @@ document.querySelector("#prvcyBtn").addEventListener("click", () => {
          <div  class="lrnmrCrd">
               <div class="app_i_crd" id="prvcy_1">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_Privacy.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_Privacy.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                     <p class="mn_tp_ttl">${data.app_data.sub_title}</p>
@@ -177,7 +177,7 @@ document.querySelector("#prvcyBtn").addEventListener("click", () => {
                 
              <div class="app_i_crd" id="prvcy_2">
                 <div class=ftr_tnc_icon>
-                  <span><img id="suggest" src="assets/icons/jts_access.png" class="app-icon" width="20"></span>
+                  <span><img   src="assets/icons/jts_access.png" class="app-icon" width="20"></span>
                 </div>
                 <div>
                     <p class="mn_tp_ttl">${data.app_data.text_4.text_4_0}</p>
@@ -227,7 +227,7 @@ document.querySelector("#chkupdtsBtn").addEventListener("click", () => {
                 <div>${e.app_nm_v}_[${e.app_size}]</div>
                 <button data-vrsn_nm="${e.app_nm_v}" class="vrsncl_Btn">
                     <span>
-                        <img id="suggest" src="assets/icons/download.png" class="app-icon" width="15">
+                        <img   src="assets/icons/download.png" class="app-icon" width="15">
                     </span>
                     Download</button>
                 </div>                
