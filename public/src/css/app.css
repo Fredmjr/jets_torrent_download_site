@@ -18,6 +18,7 @@
   --drk-theme1: #4a4a4a;
   --drk-theme2: rgb(43, 45, 48);
   --drk-theme3: #252629;
+  --drk-final: #15191b;
   --clr-theme4: #f59e1d;
   --clr-icon: #f2b010;
   --txt-theme1: #797979;
@@ -48,7 +49,7 @@ body {
   left: 0;
   right: 0;
   border-bottom: 1px solid #808d94;
-  background-color: #15191b;
+  background-color: var(--drk-final);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -95,12 +96,23 @@ body {
   width: 70%;
   font-size: 16px;
 }
+@media (max-width: 768px) {
+  #hr_dscrpt_cntnt {
+    width: 80%;
+    font-size: 14px;
+  }
+}
+
 .hm_spacr {
   height: 150px;
 }
 .hm_spacr2 {
   height: 70px;
 }
+.hm_spacr3 {
+  height: 70px;
+}
+
 #hdr_bttns {
   display: flex;
   justify-content: center;
@@ -110,7 +122,7 @@ body {
 #lrnmrBtn {
   padding: 15px 25px;
   overflow: hidden;
-  background-color: var(--drk-theme3);
+  background-color: var(--drk-final);
   border: none;
   outline: none;
   border-radius: 40px;
@@ -122,7 +134,7 @@ body {
   align-items: center;
   gap: 7px;
   font-size: 14px;
-  border-top: 2px solid var(--drk-theme1);
+  border-top: 1px solid var(--drk-theme1);
 }
 
 #lrnmrBtn:hover {
@@ -130,7 +142,8 @@ body {
 }
 @media (max-width: 768px) {
   #lrnmrBtn {
-    width: 37%;
+    width: 40%;
+    font-size: 12px;
   }
 }
 
@@ -148,8 +161,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 7px;
-  font-size: 14px;
-  border-top: 2px solid var(--txt-theme1);
+  font-size: 13px;
+  border-top: 1px solid var(--txt-theme1);
 }
 
 #dwnldBtn:hover {
@@ -158,6 +171,7 @@ body {
 @media (max-width: 768px) {
   #dwnldBtn {
     width: 37%;
+    font-size: 12px;
   }
 }
 
@@ -228,7 +242,7 @@ body {
 }
 @media (max-width: 768px) {
   #chkupdtsBtn {
-    width: 50%;
+    width: 70%;
   }
 }
 #chkupdtspnl {
