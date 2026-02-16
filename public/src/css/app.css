@@ -33,6 +33,7 @@ body {
   color: var(--clr-theme5);
   height: 100vh;
 }
+
 .contents {
   padding: 50px 30px;
   margin-bottom: 50px;
@@ -67,11 +68,22 @@ body {
 }
 #suggest {
   cursor: pointer;
+  background-color: #15191b;
 }
+#suggest:focus,
+#suggest:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 #like {
   cursor: pointer;
 }
-
+#like:focus,
+#like:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
 /* header */
 #hr_logo {
   display: flex;
@@ -140,6 +152,12 @@ body {
 #lrnmrBtn:hover {
   color: var(--drk-theme5);
 }
+#lrnmrBtn:focus,
+#lrnmrBtn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media (max-width: 768px) {
   #lrnmrBtn {
     width: 40%;
@@ -163,6 +181,11 @@ body {
   gap: 7px;
   font-size: 13px;
   border-top: 1px solid var(--txt-theme1);
+}
+#dwnldBtn:focus,
+#dwnldBtn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #dwnldBtn:hover {
@@ -240,6 +263,12 @@ body {
   align-items: center;
   gap: 7px;
 }
+#chkupdtsBtn:focus,
+#chkupdtsBtn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media (max-width: 768px) {
   #chkupdtsBtn {
     width: 70%;
@@ -301,12 +330,6 @@ body {
 
 #like {
   cursor: pointer;
-}
-
-#hr_dscrpt_cntnt {
-  text-align: center;
-  width: 50%;
-  font-size: 14px;
 }
 
 #hdr {
@@ -446,12 +469,23 @@ body {
 #prvcyBtn {
   cursor: pointer;
 }
+#prvcyBtn:focus,
+#prvcyBtn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
 #prvcyBtn:hover {
   color: white;
 }
 #trmsBtn {
   cursor: pointer;
 }
+#trmsBtn:focus,
+#trmsBtn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 #trmsBtn:hover {
   color: white;
 }
@@ -490,6 +524,11 @@ body {
   gap: 7px;
   font-size: 12px;
 }
+.vrsncl_Btn:focus,
+.vrsncl_Btn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
 .vrsncl_Btn:hover {
   color: var(--drk-theme5);
@@ -497,7 +536,7 @@ body {
 
 @media (max-width: 768px) {
   .vrsncl_Btn {
-    width: 40%;
+    width: 45%;
     font-size: 11px;
   }
 }
@@ -544,10 +583,12 @@ body {
 
 .prnt_d {
   flex-wrap: wrap;
+  align-items: center;
   display: flex;
   width: 100%;
   gap: 5px;
 }
+
 .vrsn_jts_logo {
   background-color: var(--drk-theme2);
   border-radius: 50%;
@@ -572,6 +613,12 @@ body {
   gap: 7px;
   font-size: 12px;
 }
+#heartedBtn:focus,
+#heartedBtn:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 #heartedBtn:hover {
   color: var(--clr-icon);
 }
@@ -613,6 +660,12 @@ body {
   gap: 5px;
   cursor: pointer;
 }
+#rate:focus,
+#rate:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .rate_shape {
   background-color: var(--drk-theme2);
   border-radius: 50%;
@@ -643,6 +696,12 @@ body {
 #sggstpgcntnt {
   width: 70%;
 }
+@media (max-width: 768px) {
+  #sggstpgcntnt {
+    width: 90%;
+    font-size: 12px;
+  }
+}
 #sggst_txt {
   width: 100%;
   background-color: var(--drk-theme3);
@@ -659,7 +718,11 @@ body {
 #sggst_txt:focus {
   border: 1px solid var(--clr-icon);
 }
-
+@media (max-width: 768px) {
+  #sggst_txtemail {
+    font-size: 12px;
+  }
+}
 .sggst_txt_dsrcptn {
   font-size: 10px;
   display: flex;
